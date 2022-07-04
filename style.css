@@ -6,5 +6,5 @@ button{
     padding-top: 2px;
 }
 body{
-    background-color: aquamarine;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 28, 237)), to(#117add)) fixed;
 }

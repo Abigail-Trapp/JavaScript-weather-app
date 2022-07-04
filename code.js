@@ -17,5 +17,9 @@ button.onclick = function(){
                     console.log(`${i[j]}`)
                 }
             }
+            let body = document.querySelector("body")
+            let name = document.createElement("h1")
+            name.innerHTML=`${data.name}`
+            body.append(name)
     }
 }
