@@ -8,18 +8,21 @@ button.onclick = function(){
     xhr.send()
     xhr.onload = () =>{
         const data = JSON.parse(xhr.response)
+
+        let body = document.querySelector("body")
+        let name = document.createElement("h1")
+        name.innerHTML=`${data.name}`
+        body.append(name)
+
         console.log(data)
         console.log(data.coord)
         console.log(data.weather)
             for(let i of data.weather){
                 for(let j in i){
-                    console.log(j)
-                    console.log(`${i[j]}`)
+                    let weather = document.createElement("p")
+                    weather.innerHTML = `${i[j]}`
+                    name.append(weather)
                 }
             }
-            let body = document.querySelector("body")
-            let name = document.createElement("h1")
-            name.innerHTML=`${data.name}`
-            body.append(name)
     }
 }
